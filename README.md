@@ -18,62 +18,62 @@ VictorCrypt is a command-line tool designed to encrypt and decrypt files using A
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/victorcrypt.git
-   cd victorcrypt
+   git clone https://github.com/ThitikornP516/VictorCrypt.git
+   cd VictorCrypt
    ```
 
 2. Compile the program:
    ```bash
-   gcc -o victorcrypt victorcrypt.c -lcrypto -lssl
+   gcc -o VictorCrypt VictorCrypt.c -lcrypto -lssl
    ```
 
 ## Usage
 
 ```bash
-./victorcrypt <mode> <input_file> <output_file> [key_file]
+./VictorCrypt <mode> <input_file> <output_file> [key_file]
 ```
 
 ### Modes
 
 1. **AES Encryption**:
    ```bash
-   ./victorcrypt encrypt-aes <input_file> <output_file>
+   ./VictorCrypt encrypt-aes <input_file> <output_file>
    ```
    - Generates a random AES key and saves it to `aes_key.bin`.
 
 2. **AES Decryption**:
    ```bash
-   ./victorcrypt decrypt-aes <input_file> <output_file>
+   ./VictorCrypt decrypt-aes <input_file> <output_file>
    ```
    - Uses the key from `aes_key.bin` for decryption.
 
 3. **ChaCha20 Encryption**:
    ```bash
-   ./victorcrypt encrypt-chacha20 <input_file> <output_file>
+   ./VictorCrypt encrypt-chacha20 <input_file> <output_file>
    ```
    - Generates a random ChaCha20 key and nonce, saving them to `chacha20_key.bin` and `chacha20_nonce.bin`.
 
 4. **ChaCha20 Decryption**:
    ```bash
-   ./victorcrypt decrypt-chacha20 <input_file> <output_file>
+   ./VictorCrypt decrypt-chacha20 <input_file> <output_file>
    ```
    - Uses the key and nonce from `chacha20_key.bin` and `chacha20_nonce.bin`.
 
 5. **Hybrid RSA-AES Encryption**:
    ```bash
-   ./victorcrypt encrypt-hybrid <input_file> <output_file> <rsa_public_key>
+   ./VictorCrypt encrypt-hybrid <input_file> <output_file> <rsa_public_key>
    ```
    - Encrypts the AES key using the provided RSA public key.
 
 6. **Hybrid RSA-AES Decryption**:
    ```bash
-   ./victorcrypt decrypt-hybrid <input_file> <output_file> <rsa_private_key>
+   ./VictorCrypt decrypt-hybrid <input_file> <output_file> <rsa_private_key>
    ```
    - Decrypts the AES key using the provided RSA private key.
 
 ## File Structure
 
-- `victorcrypt.c`: Main source code.
+- `VictorCrypt.c`: Main source code.
 - `aes_key.bin`: Stores the AES encryption key.
 - `chacha20_key.bin`: Stores the ChaCha20 encryption key.
 - `chacha20_nonce.bin`: Stores the ChaCha20 nonce.
