@@ -86,7 +86,7 @@ VictorCrypt is a command-line tool designed to encrypt and decrypt files using A
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.
 
 ## Contributing
 
